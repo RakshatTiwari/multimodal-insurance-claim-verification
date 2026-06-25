@@ -1,0 +1,22 @@
+# Virtual Environment
+venv/
+
+# Environment Variables
+.env
+
+# VS Code
+.vscode/
+
+# Python
+__pycache__/
+*.pyc
+
+# macOS
+.DS_Store
+
+# Dataset (temporarily ignored)
+dataset/claims.csv
+dataset/sample_claims.csv
+dataset/user_history.csv
+dataset/evidence_requirements.csv
+dataset/images/

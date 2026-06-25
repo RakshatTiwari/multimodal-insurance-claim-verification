@@ -1,0 +1,54 @@
+{
+  "claim_status": {
+    "accuracy": 0.75,
+    "correct": 15,
+    "total": 20
+  },
+  "issue_type": {
+    "accuracy": 0.3,
+    "correct": 6,
+    "total": 20
+  },
+  "object_part": {
+    "accuracy": 0.8,
+    "correct": 16,
+    "total": 20
+  },
+  "severity": {
+    "accuracy": 0.6,
+    "correct": 12,
+    "total": 20
+  },
+  "evidence_standard_met": {
+    "accuracy": 0.9,
+    "correct": 18,
+    "total": 20
+  },
+  "valid_image": {
+    "accuracy": 0.9,
+    "correct": 18,
+    "total": 20
+  },
+  "overall": {
+    "accuracy": 0.7083,
+    "correct": 85,
+    "total": 120
+  },
+  "claim_status_breakdown": {
+    "contradicted": {
+      "tp": 0,
+      "fp": 0,
+      "fn": 5
+    },
+    "not_enough_information": {
+      "tp": 2,
+      "fp": 1,
+      "fn": 0
+    },
+    "supported": {
+      "tp": 13,
+      "fp": 4,
+      "fn": 0
+    }
+  }
+}
