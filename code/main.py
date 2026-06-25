@@ -1,12 +1,12 @@
 #!/usr/bin/env python3
 """
-run.py — Main entrypoint for the Damage Claim Verification System.
+main.py — Main entrypoint for the Damage Claim Verification System.
 
 Usage:
-    python run.py                          # process claims.csv → output.csv
-    python run.py --evaluate               # run evaluation on sample_claims.csv first
-    python run.py --evaluate --no-test     # evaluate only, skip test set
-    python run.py --claims path/to/file    # custom claims file
+    python main.py                          # process claims.csv → output.csv
+    python main.py --evaluate               # run evaluation on sample_claims.csv first
+    python main.py --evaluate --no-test     # evaluate only, skip test set
+    python main.py --claims path/to/file    # custom claims file
 """
 
 import argparse
@@ -17,7 +17,7 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).parent / "verification"))
 sys.path.insert(0, str(Path(__file__).parent / "evaluation"))
 
-from verify import process_claims, load_csv
+from verification.verify import process_claims, load_csv
 
 BASE = Path(__file__).resolve().parent.parent
 
@@ -55,8 +55,8 @@ def main():
         print("STEP 1: Running evaluation on sample_claims.csv")
         print("=" * 60)
 
-        import evaluate
-        evaluate.main()
+        import evaluation.evaluate
+        evaluation.evaluate.main()
 
     # ── Step 2: Process test claims ───────────────────────────────────────────
     if not args.no_test:

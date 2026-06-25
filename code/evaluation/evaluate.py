@@ -12,7 +12,7 @@ from pathlib import Path
 
 # Add src to path
 sys.path.insert(0, str(Path(__file__).parent.parent / "verification"))
-from verify import process_claims, load_csv, OUTPUT_COLUMNS
+from verification.verify import process_claims, load_csv, OUTPUT_COLUMNS
 
 EVAL_COLUMNS = ["claim_status", "issue_type", "object_part", "severity",
                 "evidence_standard_met", "valid_image"]
